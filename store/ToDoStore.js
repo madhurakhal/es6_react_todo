@@ -16,7 +16,7 @@ var ToDoStore = _.extend({}, EventEmitter.prototype, {
     });
   },
   toggleTodo(id) {
-    var todo = this.todos.filter((todo) => todo.id == id)[0];
+    let todo = this.todos.filter((todo) => todo.id == id)[0];
     todo.completed = !todo.completed;
   },
   clearAll() {

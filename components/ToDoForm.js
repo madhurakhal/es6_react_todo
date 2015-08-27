@@ -18,7 +18,7 @@ export default class ToDoForm extends React.Component {
 
   _createTodo(e) {
     e.preventDefault();
-    var name = React.findDOMNode(this.refs.todo_name).value;
+    let name = React.findDOMNode(this.refs.todo_name).value;
     if(name.trim() == '') return;
 
     ToDoDispatcher.dispatch({
