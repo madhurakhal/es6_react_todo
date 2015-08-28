@@ -28,7 +28,7 @@ export default class ToDo extends React.Component{
     });
   }
   render() {
-    const lists = this.state.todos.map((todoItem, idx) => {
+    const listItems = this.state.todos.map((todoItem) => {
       return(<li className="ui-state-default" key={todoItem.id}>
               <div className="checkbox">
                 <label>
@@ -48,7 +48,7 @@ export default class ToDo extends React.Component{
           <ToDoForm/>
           <hr />
           <ul id="sortable" className="list-unstyled">
-            {lists}
+            {listItems}
           </ul>
           <div className="todo-footer">
             <strong>

@@ -4,20 +4,20 @@ import ToDoStore from '../store/ToDoStore';
 const ToDoDispatcher = new Dispatcher();
 
 ToDoDispatcher.register((payload) => {
-  switch(payload.action) {
+  switch (payload.action) {
     case 'add':
-    ToDoStore.addTodo(payload.todo);
-    break;
+      ToDoStore.addTodo(payload.todo);
+      break;
 
     case 'toggle':
-    ToDoStore.toggleTodo(payload.todo.id);
-    break;
+      ToDoStore.toggleTodo(payload.todo.id);
+      break;
 
     case 'clear':
-    ToDoStore.clearAll();
-    break;
+      ToDoStore.clearAll();
+      break;
     default:
-    return true;
+      return true;
   }
   ToDoStore.emitChange();
 });
