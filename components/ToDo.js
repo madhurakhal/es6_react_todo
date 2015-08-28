@@ -41,7 +41,7 @@ export default class ToDo extends React.Component{
             </li>);
     })
     let todosLeft = this.state.todos.filter((todo) => {return todo.completed != true}).length;
-    let todoText = ((todosLeft == 1) || (todosLeft == 0)) ? "Todo" : "Todos";
+    const todoText = "Todo" + ((todosLeft !== 1) ? "s" : "");
     return (
         <div className="todolist not-done">
           <h1>Todos</h1>
