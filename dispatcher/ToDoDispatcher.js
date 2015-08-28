@@ -1,7 +1,7 @@
 import {Dispatcher} from 'flux';
 import ToDoStore from '../store/ToDoStore';
 
-let ToDoDispatcher = new Dispatcher();
+const ToDoDispatcher = new Dispatcher();
 
 ToDoDispatcher.register((payload) => {
   switch(payload.action) {

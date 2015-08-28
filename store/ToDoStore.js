@@ -10,13 +10,13 @@ var ToDoStore = _.extend({}, EventEmitter.prototype, {
     this.todos.push(newTodo);
   },
   removeTodo(todo_id) {
-    let todos = this.todos;
+    const todos = this.todos;
     _.remove(todos, (todo) => {
       return todo_id == todo.id;
     });
   },
   toggleTodo(id) {
-    let todo = this.todos.filter((todo) => todo.id == id)[0];
+    const todo = this.todos.filter((todo) => todo.id == id)[0];
     todo.completed = !todo.completed;
   },
   clearAll() {

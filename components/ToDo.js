@@ -28,7 +28,7 @@ export default class ToDo extends React.Component{
     });
   }
   render() {
-    let lists = this.state.todos.map((todoItem, idx) => {
+    const lists = this.state.todos.map((todoItem, idx) => {
       return(<li className="ui-state-default" key={todoItem.id}>
               <div className="checkbox">
                 <label>
