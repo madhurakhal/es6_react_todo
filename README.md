@@ -5,5 +5,5 @@ React Todo using ES6
 1. clone the repo
 2. npm install
 3. gulp
-4. run the server on current folder (http-server -p 300)
-5. goto http://localhost:300
+4. run the server on current folder (http-server -p 3000)
+5. goto http://localhost:3000
