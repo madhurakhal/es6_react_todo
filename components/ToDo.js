@@ -9,15 +9,15 @@ export default class ToDo extends React.Component{
     this.state = {
       todos: ToDoStore.getTodos()
     };
-  }
-  _onChange() {
-    this.setState({todos: ToDoStore.getTodos()})
+    this._onChange = () => {
+      this.setState({todos: ToDoStore.getTodos()});
+    }
   }
   componentDidMount() {
-    ToDoStore.addChangeListener(this._onChange.bind(this));
+    ToDoStore.addChangeListener(this._onChange);
   }
   componentWillUnmount() {
-    ToDoStore.removeChangeListener(this._onChange.bind(this));
+    ToDoStore.removeChangeListener(this._onChange);
   }
   _toggleTodo(evt) {
     ToDoDispatcher.dispatch({
