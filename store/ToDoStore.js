@@ -25,7 +25,7 @@ var ToDoStore = _.extend({}, EventEmitter.prototype, {
   addChangeListener(callback) {
     this.on('change', callback)
   },
-  removeChangeListerner(callback) {
+  removeChangeListener(callback) {
     this.removeListener('change', callback);
   },
   emitChange(callback) {

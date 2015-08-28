@@ -3,14 +3,14 @@ import ToDoStore from '../store/ToDoStore';
 
 let ToDoDispatcher = new Dispatcher();
 
-ToDoDispatcher.register((playload) => {
-  switch(playload.action) {
+ToDoDispatcher.register((payload) => {
+  switch(payload.action) {
     case 'add':
-    ToDoStore.addTodo(playload.todo);
+    ToDoStore.addTodo(payload.todo);
     break;
 
     case 'toggle':
-    ToDoStore.toggleTodo(playload.todo.id);
+    ToDoStore.toggleTodo(payload.todo.id);
     break;
 
     case 'clear':

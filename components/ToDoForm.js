@@ -35,7 +35,7 @@ export default class ToDoForm extends React.Component {
   render() {
     return (
       <form onSubmit={this._createTodo.bind(this)}>
-        <input type="text" ref="todo_name" className="form-control add-todo" placeholder="Add todo"/>
+        <input type="text" ref="todo_name" className="form-control add-todo" placeholder="Add Todo"/>
         <Button bsStyle="danger"
                 bsSize="small" type="button" id="clear-todo" onClick={this._clearAllTodos}> Clear All </Button>
         <Button bsStyle="success"
