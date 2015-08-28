@@ -28,7 +28,7 @@ export default class ToDo extends React.Component{
     });
   }
   render() {
-    let lists = this.state.todos.map((todoItem, idx) => {
+    const listItems = this.state.todos.map((todoItem) => {
       return(<li className="ui-state-default" key={todoItem.id}>
               <div className="checkbox">
                 <label>
@@ -40,15 +40,15 @@ export default class ToDo extends React.Component{
               </div>
             </li>);
     })
-    let todosLeft = this.state.todos.filter((todo) => {return todo.completed != true}).length;
-    let todoText = ((todosLeft == 1) || (todosLeft == 0)) ? "Todo" : "Todos";
+    const todosLeft = this.state.todos.filter(todo => !todo.completed).length;
+    const todoText = "Todo" + ((todosLeft !== 1) ? "s" : "");
     return (
         <div className="todolist not-done">
           <h1>Todos</h1>
           <ToDoForm/>
           <hr />
           <ul id="sortable" className="list-unstyled">
-            {lists}
+            {listItems}
           </ul>
           <div className="todo-footer">
             <strong>

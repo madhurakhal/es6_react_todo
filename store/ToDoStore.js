@@ -9,14 +9,11 @@ var ToDoStore = _.extend({}, EventEmitter.prototype, {
   addTodo(newTodo) {
     this.todos.push(newTodo);
   },
-  removeTodo(todo_id) {
-    let todos = this.todos;
-    _.remove(todos, (todo) => {
-      return todo_id == todo.id;
-    });
+  removeTodo(id) {
+    _.remove(this.todos,  (todo) => todo.id == id);
   },
   toggleTodo(id) {
-    let todo = this.todos.filter((todo) => todo.id == id)[0];
+    const todo = _.find(this.todos, (todo) => todo.id == id);
     todo.completed = !todo.completed;
   },
   clearAll() {
